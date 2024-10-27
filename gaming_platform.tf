@@ -47,7 +47,7 @@ resource "aws_route_table" "public_route_table" {
   }
 }
 
-# Associate Route Tables with Subnets
+# For Associated Route Tables with Subnets
 resource "aws_route_table_association" "public_rt_association_1" {
   subnet_id      = aws_subnet.public_subnet_1.id
   route_table_id = aws_route_table.public_route_table.id
@@ -77,7 +77,7 @@ resource "aws_security_group" "game_sg" {
   }
 }
 
-# Load Balancer
+# Load Balancers
 resource "aws_lb" "game_elb" {
   name               = "game-elb"
   internal           = false
