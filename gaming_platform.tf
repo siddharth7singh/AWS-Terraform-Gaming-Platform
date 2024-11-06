@@ -297,5 +297,8 @@ terraform {
     bucket = "terraform-state-storage"
     key    = "game-infrastructure/terraform.tfstate"
     region = "us-west-2"
+
+    # DyanmoDB for state locking
+    game_dynamo_table = "terraform-lock-table"
   }
 }
